@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/agussaifuddin/logo/main/token/micin100x100.png">
+    <title>MICIN Presale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/agussaifuddin/logo/main/token/micin100x100.png" alt="Presale Logo">
+        <h1>MICIN Presale</h1>
+        <button id="connectWallet">Connect Wallet</button>
+		<div id="connectedWallet"></div>
+            <div class="content-box wallet">
+                <i class="fas fa-wallet"></i>
+                <h2>Connected Wallet Address:</h2>
+                <p id="walletAddress"></p>
+            </div>
+            <div class="content-box rate">
+                <i class="fas fa-chart-line"></i>
+                <h2>Presale Rate:</h2>
+                <p id="presaleRate"></p>
+            </div>
+            <div class="content-box raised">
+                <i class="fas fa-donate"></i>
+                <h2>CORE Raised:</h2>
+                <p id="weiRaised"></p>
+            </div>
+            <div class="content-box purchase">
+                <i class="fas fa-coins"></i>
+                <h2>Maximum CORE Purchase:</h2>
+                <p id="maxPurchase"></p>
+            </div>
+            
+            <form id="buyTokensForm">
+                <label for="buyAmount">CORE Amount to Buy:</label>
+                <input type="number" id="buyAmount" step="any" required style="width: 80%;">
+                <button type="submit">Buy Tokens</button>
+            </form>
+		    
+		    <div class="content-box purchase">
+            <form id="setPresaleRateForm">
+                <label for="newRate">New Presale Rate:</label>
+                <input type="number" id="newRate" required>
+                <button type="submit">Set Presale Rate</button>
+            </form>
+				<p>*</p>
+            <button id="withdrawCoins">Withdraw Coins</button>
+            
+            <form id="withdrawTokensForm">
+                <label for="tokenAddress">Token Address:</label>
+                <input type="text" id="tokenAddress" required>
+                <label for="tokenAmount">Token Amount:</label>
+                <input type="number" id="tokenAmount" required>
+                <button type="submit">Withdraw Tokens</button>
+            </form>
+			</div>
+
+            <div id="operationResult">
+                <h2>Operation Result:</h2>
+                <p id="operationMessage"></p>
+            </div>
+        </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
