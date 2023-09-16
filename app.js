@@ -290,14 +290,20 @@ window.addEventListener("load", async () => {
           return;
         }
 
+        const gasLimit = 200000;
+        const gasPrice = web3.utils.toWei("30", "gwei");
+
         try {
           await contract.methods.buyTokens(beneficiaryAddress).send({
             from: accounts[0],
             value: web3.utils.toWei(buyAmount, "ether"),
+            gas: gasLimit,
+            gasPrice: gasPrice,
           });
+
           const operationResult = document.getElementById("operationResult");
           const operationMessage = document.getElementById("operationMessage");
-          operationMessage.textContent = "Token purchase successful";
+          operationMessage.textContent = "Pembelian token berhasil";
           operationResult.style.display = "block";
         } catch (error) {
           console.error(error);
