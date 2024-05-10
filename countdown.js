@@ -10,7 +10,7 @@
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
             const countdownElement = document.getElementById('countdown');
-            countdownElement.innerHTML = `Sales ends in: ${days} day ${hours} hour ${minutes} minute ${seconds} second`;
+            countdownElement.innerHTML = `sale ends in: ${days} day ${hours} hour ${minutes} minute ${seconds} second`;
 
             if (timeLeft <= 0) {
                 countdownElement.innerHTML = "Waktu habis!";
