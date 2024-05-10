@@ -258,7 +258,7 @@ window.addEventListener("load", async () => {
         },
       ];
 
-      const contractAddress = "0x36F537EfE40887eC22320481046259947079D181";
+      const contractAddress = "0x35d478fAF5350764Bf8f6f4961d77F74Cc134374";
 
       const contract = new web3.eth.Contract(abi, contractAddress);
 
